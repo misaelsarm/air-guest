@@ -34,6 +34,7 @@ body {
   width: 100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  z-index: 2;
 }
 
 .nav-bar:hover {
@@ -87,7 +88,26 @@ body {
 
 .nav-bar-links li a {
   color: black;
+  position: relative;
   text-decoration: none;
+}
+
+.nav-bar-links li a::after {
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  background-color: black;
+  bottom: -3rem;
+  left: 0;
+  opacity: 0;
+}
+
+.nav-bar-links li a:hover::after {
+  opacity: 1;
+  bottom: -0.5rem;
 }
 
 .nav-bar .menu {
@@ -104,6 +124,7 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   z-index: 5;
+  cursor: pointer;
 }
 
 .nav-bar .menu .line {
@@ -154,11 +175,77 @@ body {
 }
 
 .intro-image {
-  height: 50%;
+  height: 50vh;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../assets/img/img-6.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../assets/img/img-6.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.reserva {
+  height: 50vh;
+  background: #38383b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.reserva-title {
+  font-size: 3.5rem;
+}
+
+.reserva-text {
+  font-size: 2rem;
+}
+
+.reserva-button {
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  background: #a8a6a1;
+  font-size: 2rem;
+  padding: 2rem 4rem;
+}
+
+.footer {
+  height: 50vh;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 2.5rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
 }
 
 .about-us-header {
@@ -182,14 +269,79 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 2rem;
 }
 
 .services-header h2 {
-  color: #38383b;
-  font-size: 5rem;
+  color: white;
+  font-size: 3.5rem;
   font-weight: 500;
-  background-color: #38383b2f;
+  text-align: center;
+}
+
+.services-intro {
   padding: 2rem;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services-intro-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.services-intro-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
+}
+
+.services-intro-grid .service {
+  position: relative;
+  height: 17.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.services-intro-grid-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.services-intro-grid-description {
+  font-size: 1.5rem;
+}
+
+.services-intro-grid-image {
+  background-image: url("../assets/img/img-6.jpg");
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-size: cover;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.services-intro-grid-image:hover {
+  opacity: 1;
 }
 
 .about-us-intro {
@@ -235,6 +387,40 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .nav-bar-links {
+    opacity: 1;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    position: static;
+    font-size: 1.7rem;
+    font-weight: 400;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .nav-bar-links li:not(:last-child) {
+    margin-bottom: 0rem;
+    margin-right: 4rem;
+  }
+  .nav-bar-links li a {
+    color: white;
+  }
+  .nav-bar-links li a::after {
+    background-color: white;
+  }
+  .nav-bar .menu {
+    display: none;
+  }
   .intro {
     display: -webkit-box;
     display: -ms-flexbox;

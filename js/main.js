@@ -21,6 +21,3 @@ function showMenu() {
         }
     }
 }
-
-
-console.log(menu.children[0]);

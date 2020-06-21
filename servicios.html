@@ -10,16 +10,18 @@
 
 <body>
     <nav class="nav-bar">
-        <div class="nav-bar-brand">
-            <img src="assets/img/logo+blanco.png" alt="">
-        </div>
-        <ul class="nav-bar-links">
-            <li><a href="">Nosotros</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Galeria</a></li>
-            <li><a href="">Reservar</a></li>
+        <a href="index.html">
+            <div class="nav-bar-brand">
+                <img src="assets/img/logo+blanco.png" alt="">
+            </div>
+        </a>
+        <ul id="nav-bar-links" class="nav-bar-links">
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="reserva.html">Reservar</a></li>
         </ul>
-        <div class="menu">
+        <div id="menu" class="menu">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -32,16 +34,97 @@
     </header>
     <main>
         <section class="services-intro">
-            <div class="services-intro-title">
-                <h2>Servicios en Air Guest</h2>
+            <div>
+                <h2 class="services-intro-title">Servicios en Air Guest</h2>
             </div>
             <div class="services-intro-grid">
-                <div class="services-intro-grid-title"></div>
-                <div class="services-intro-grid-description"></div>
+                <div class="service">
+                    <h2 class="services-intro-grid-title">
+                        Guarda y Custodia de Aeronaves.
+                    </h2>
+                    <p class="services-intro-grid-description">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Deleniti, excepturi!</p>
+                    <div class="services-intro-grid-image"></div>
+                </div>
+                <div class="service">
+                    <h2 class="services-intro-grid-title">
+                        Reserva de Hotel.
+                    </h2>
+                    <p class="services-intro-grid-description">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Deleniti, excepturi!</p>
+                        <div class="services-intro-grid-image"></div>
+                </div>
+                <div class="service">
+                    <h2 class="services-intro-grid-title">
+                        Limpieza de Aeronaves.
+                    </h2>
+                    <p class="services-intro-grid-description">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Deleniti, excepturi!</p>
+                        <div class="services-intro-grid-image"></div>
+                </div>
+                <div class="service">
+                    <h2 class="services-intro-grid-title">
+                        Asistencia para pasajeros y tripulación.
+                    </h2>
+                    <p class="services-intro-grid-description">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Deleniti, excepturi!</p>
+                        <div class="services-intro-grid-image"></div>
+                </div>
+                <div class="service">
+                    <h2 class="services-intro-grid-title">
+                        Servicios de Apoyo en Tierra.
+                    </h2>
+                    <p class="services-intro-grid-description">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Deleniti, excepturi!</p>
+                        <div class="services-intro-grid-image"></div>
+                </div>
+                <div class="service">
+                    <h2 class="services-intro-grid-title">
+                        Sala de Descanso.
+                    </h2>
+                    <p class="services-intro-grid-description">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Deleniti, excepturi!</p>
+                        <div class="services-intro-grid-image"></div>
+                </div>
+                <div class="service">
+                    <h2 class="services-intro-grid-title">
+                        Coordinación de Combustible.
+                    </h2>
+                    <p class="services-intro-grid-description">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Deleniti, excepturi!</p>
+                        <div class="services-intro-grid-image"></div>
+                </div>
+                <div class="service">
+                    <h2 class="services-intro-grid-title">
+                        Cocina y Área de Café.
+                    </h2>
+                    <p class="services-intro-grid-description">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                        Deleniti, excepturi!</p>
+                        <div class="services-intro-grid-image"></div>
+                </div>
             </div>
-
+        </section>
+        <section class="reserva">
+            <h2 class="reserva-title">Reserva con nosotros</h2>
+            <p class="reserva-text">Prepararemos la mejor propuesta que se ajuste a tus necesidades.</p>
+            <a href="reserva.html" class="reserva-button">Reservar</a href="">
         </section>
     </main>
+    <footer class="footer">
+        <h2 class="footer-title">Air Guest | Mucho más que un FBO</h2>
+        <a href="mailto:info@airguest.com" class="footer-link">info@airguest.com</a>
+        <a class="footer-link" href="#">(555) 555-5555</a>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

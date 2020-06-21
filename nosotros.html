@@ -10,19 +10,21 @@
 
 <body>
     <nav class="nav-bar">
-        <div class="nav-bar-brand">
-            <img src="assets/img/logo+blanco.png" alt="">
-        </div>
-        <ul class="nav-bar-links">
-            <li><a href="">Nosotros</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Galeria</a></li>
-            <li><a href="">Reservar</a></li>
+        <a href="index.html">
+            <div class="nav-bar-brand">
+                <img src="assets/img/logo+blanco.png" alt="">
+            </div>
+        </a>
+        <ul id="nav-bar-links" class="nav-bar-links">
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="reserva.html">Reservar</a></li>
         </ul>
-        <div class="menu">
-            <div id="line-1" class="line"></div>
-            <div id="line-2" class="line"></div>
-            <div id="line-3" class="line"></div>
+        <div id="menu" class="menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
     </nav>
     <header class="about-us-header">
@@ -41,7 +43,18 @@
                 <h2>La Aviación, Nuestra Pasión</h2>
             </div>
         </section>
+        <section class="reserva">
+            <h2 class="reserva-title">Reserva con nosotros</h2>
+            <p class="reserva-text">Prepararemos la mejor propuesta que se ajuste a tus necesidades.</p>
+            <a href="reserva.html" class="reserva-button">Reservar</a href="">
+        </section>
     </main>
+    <footer class="footer">
+        <h2 class="footer-title">Air Guest | Mucho más que un FBO</h2>
+        <a href="mailto:info@airguest.com" class="footer-link">info@airguest.com</a>
+        <a class="footer-link" href="#">(555) 555-5555</a>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
