@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700;900&family=Raleway:wght@200;300;400;500;600;700&display=swap");
+@import "base/base";
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    position: fixed;
+    width: 100%;
+    transition: all 0.5s;
+    &:hover {
+        background-color: black;
+    }
+    &-brand {
+        width: 15rem;
+        img {
+            width: 100%;
+        }
+    }
+    &-links {
+        transition: all 0.5s;
+        opacity: 0.7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 3rem;
+        font-weight: 600;
+        transform: translateX(100%);
+        li {
+            list-style: none;
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+    .menu {
+        height: 3.5rem;
+        width: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        z-index: 5;
+        .line {
+            transition: all 0.5s;
+            height: 0.2rem;
+            background-color: white;
+        }
+    }
+}
+
+.menu-active {
+    background-color: black !important;
+}
+.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.header {
+    height: 100vh;
+    background: url("../assets/img/img-5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.intro {
+    height: 100vh;
+    &-text {
+        padding: 2rem;
+        height: auto;
+        background-color: #38383b;
+        color: white;
+        &-title {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        &-paragraph {
+            font-size: 1.7rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            line-height: 2;
+        }
+    }
+    &-image {
+        height: 50%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../assets/img/img-6.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.about-us-header {
+    height: 100vh;
+    background: url("../assets/img/img-14.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.services-header {
+    height: 100vh;
+    background: url("../assets/img/img-12.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2 {
+        color: #38383b;
+        font-size: 5rem;
+        font-weight: 500;
+        background-color: #38383b2f;
+        padding: 2rem;
+    }
+}
+
+.about-us-intro {
+    height: 100vh;
+    &-text {
+        padding: 2rem;
+        height: 50%;
+        font-size: 1.7rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+    &-image {
+        color: white;
+        background: linear-gradient(rgba(0, 0, 0, 0.2)), url("../assets/img/img-4.jpg");
+        height: 50%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        padding: 2rem;
+        h2 {
+            font-size: 2.7rem;
+            font-weight: 300;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .intro {
+        display: flex;
+        &-text,
+        &-image {
+            width: 60%;
+            height: 100%;
+        }
+        &-text {
+            width: 40%;
+            padding: 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &-title {
+                font-size: 5rem;
+                font-weight: 300;
+            }
+        }
+    }
+}
