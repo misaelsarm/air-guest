@@ -1,0 +1,25 @@
+.reserva {
+    height: 50vh;
+    background: #38383b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    &-title {
+        font-size: 3.5rem;
+    }
+    &-text {
+        font-size: 2rem;
+    }
+    &-button {
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        background: #a8a6a1;
+        font-size: 2rem;
+        padding: 2rem 4rem;
+    }
+}
