@@ -14,5 +14,16 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
     font-family: "Noto Serif SC", serif;
-    //font-family: 'Raleway', sans-serif;
+    //
+}
+
+h {
+    &1,
+    &2,
+    &3,
+    &4,
+    &5,
+    &6 {
+        font-weight: 500;
+    }
 }
