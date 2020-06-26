@@ -4,9 +4,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
     background: white;
+    &-image {
+        width: 15rem;
+    }
     &-title {
         font-size: 2.5rem;
     }

@@ -7,7 +7,7 @@
     width: 100%;
     transition: all 0.5s;
     z-index: 2;
-    font-family: 'Barlow', sans-serif;
+    font-family: "Barlow", sans-serif;
     &:hover {
         background-color: #38383b;
     }
@@ -31,7 +31,7 @@
         top: 0;
         left: 0;
         font-size: 3rem;
-        font-weight: 600;
+        font-weight: 300;
         transform: translateX(100%);
         li {
             list-style: none;

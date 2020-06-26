@@ -20,6 +20,10 @@
         border-radius: 5px;
         background: #a8a6a1;
         font-size: 2rem;
-        padding: 2rem 4rem;
+        padding: 1.5rem 4rem;
+        transition: all 0.3s;
+        &:hover {
+            background: #777777;
+        }
     }
 }
