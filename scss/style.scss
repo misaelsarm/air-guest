@@ -122,7 +122,7 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 2rem;
-        justify-content: center;
+        justify-content: space-evenly;
         .service {
             position: relative;
             height: 25rem;
@@ -132,6 +132,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            background-color: rgb(245, 244, 244);
         }
         &-title {
             font-size: 2.2rem;
@@ -146,8 +147,9 @@
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 1;
+            z-index: 5;
             background-size: cover !important;
+            background-position: center !important;
             opacity: 0;
             transition: all 0.3s;
             &:hover {
@@ -155,28 +157,37 @@
             }
             &-1 {
                 background: url("../assets/img/img-5.jpg");
-                background-position: center !important;
             }
             &-2 {
                 background: url("../assets/img/img-8.jpg");
             }
             &-3 {
                 background: url("../assets/img/img-1.jpg");
-                background-position: center !important;
             }
             &-4 {
+                background: url("../assets/img/img-23.jpg");
             }
             &-5 {
-                background-position: bottom !important;
                 background: url("../assets/img/img-18.jpg");
+                background-position: bottom !important;
             }
             &-6 {
                 background: url("../assets/img/img-9.jpg");
             }
             &-7 {
+                background: url("../assets/img/img-19.jpg");
             }
             &-8 {
                 background: url("../assets/img/img-13.jpg");
+            }
+            &-9 {
+                background: url("../assets/img/img-2.jpg");
+            }
+            &-10 {
+                background: url("../assets/img/img-6.jpg");
+            }
+            &-11 {
+                background: url("../assets/img/img-4.jpg");
             }
         }
     }
@@ -220,6 +231,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    background-color: #38383b;
     &-image {
         background: linear-gradient(rgba(0, 0, 0, 0.2)), url("../assets/img/img-1.jpg");
         background-size: cover;
@@ -243,7 +255,6 @@
         }
     }
     &-form {
-        background-color: #38383b;
         width: 100%;
         display: flex;
         align-items: center;
@@ -298,8 +309,8 @@
     &-map {
         padding: 2rem;
         text-align: center;
-        background-color: #4e4e4e;
-        color: white;
+        background-color: white;
+        color: #38383b;
         h2 {
             font-size: 3rem;
             margin-bottom: 2rem;
@@ -387,7 +398,7 @@
 
     .services-intro {
         &-grid {
-            grid-template-columns: 35% 35%;
+            grid-template-columns: repeat(3, 35%);
         }
     }
 
@@ -430,36 +441,37 @@
 
     .contact {
         height: auto;
-        flex-direction: row;
-        &-image {
-            width: 40%;
+        flex-direction: column;
+        &-area {
             display: flex;
-            flex-direction: column;
-            height: 100vh;
-            .text {
-                width: 60%;   
+            .contact-image {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                .text {
+                    width: 60%;
+                }
             }
-        }
-        &-form {
-            width: 33%;
-            .form {
-                padding: 4rem;
-                width: 80%;
+            .contact-form {
+                width: 50%;
+                .form {
+                    padding: 4rem;
+                    width: 80%;
+                }
             }
         }
 
         &-map {
-            width: 33%;
+            width: 100%;
             padding: 0rem;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             flex-direction: column;
-            h2 {
-                color: white;
-            }
+            padding: 2rem;
             &-image {
-                width: 85%;
+                width: 40%;
             }
         }
     }

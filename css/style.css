@@ -384,9 +384,9 @@ h1, h2, h3, h4, h5, h6 {
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
   grid-gap: 2rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .services-intro-grid .service {
@@ -407,6 +407,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #f5f4f4;
 }
 
 .services-intro-grid-title {
@@ -424,8 +425,9 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 5;
   background-size: cover !important;
+  background-position: center !important;
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -437,7 +439,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-intro-grid-image-1 {
   background: url("../assets/img/img-5.jpg");
-  background-position: center !important;
 }
 
 .services-intro-grid-image-2 {
@@ -446,20 +447,39 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-intro-grid-image-3 {
   background: url("../assets/img/img-1.jpg");
-  background-position: center !important;
+}
+
+.services-intro-grid-image-4 {
+  background: url("../assets/img/img-23.jpg");
 }
 
 .services-intro-grid-image-5 {
-  background-position: bottom !important;
   background: url("../assets/img/img-18.jpg");
+  background-position: bottom !important;
 }
 
 .services-intro-grid-image-6 {
   background: url("../assets/img/img-9.jpg");
 }
 
+.services-intro-grid-image-7 {
+  background: url("../assets/img/img-19.jpg");
+}
+
 .services-intro-grid-image-8 {
   background: url("../assets/img/img-13.jpg");
+}
+
+.services-intro-grid-image-9 {
+  background: url("../assets/img/img-2.jpg");
+}
+
+.services-intro-grid-image-10 {
+  background: url("../assets/img/img-6.jpg");
+}
+
+.services-intro-grid-image-11 {
+  background: url("../assets/img/img-4.jpg");
 }
 
 .about-us-header {
@@ -519,6 +539,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #38383b;
 }
 
 .contact-image {
@@ -558,7 +579,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-form {
-  background-color: #38383b;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -639,8 +659,8 @@ h1, h2, h3, h4, h5, h6 {
 .contact-map {
   padding: 2rem;
   text-align: center;
-  background-color: #4e4e4e;
-  color: white;
+  background-color: white;
+  color: #38383b;
 }
 
 .contact-map h2 {
@@ -739,8 +759,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 4.5rem;
   }
   .services-intro-grid {
-    -ms-grid-columns: 35% 35%;
-        grid-template-columns: 35% 35%;
+    -ms-grid-columns: (35%)[3];
+        grid-template-columns: repeat(3, 35%);
   }
   .gallery {
     height: 250vh;
@@ -798,13 +818,18 @@ h1, h2, h3, h4, h5, h6 {
   }
   .contact {
     height: auto;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .contact-image {
-    width: 40%;
+  .contact-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact-area .contact-image {
+    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -814,18 +839,18 @@ h1, h2, h3, h4, h5, h6 {
             flex-direction: column;
     height: 100vh;
   }
-  .contact-image .text {
+  .contact-area .contact-image .text {
     width: 60%;
   }
-  .contact-form {
-    width: 33%;
+  .contact-area .contact-form {
+    width: 50%;
   }
-  .contact-form .form {
+  .contact-area .contact-form .form {
     padding: 4rem;
     width: 80%;
   }
   .contact-map {
-    width: 33%;
+    width: 100%;
     padding: 0rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -840,12 +865,10 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .contact-map h2 {
-    color: white;
+    padding: 2rem;
   }
   .contact-map-image {
-    width: 85%;
+    width: 40%;
   }
 }
 /*# sourceMappingURL=style.css.map */
