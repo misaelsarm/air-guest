@@ -475,6 +475,7 @@
         flex-direction: column;
         &-area {
             display: flex;
+            flex-direction: row-reverse;
             .contact-image {
                 width: 50%;
                 display: flex;
