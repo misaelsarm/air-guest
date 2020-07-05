@@ -31,41 +31,59 @@
         <section class="contact">
             <div class="contact-area">
                 <div class="contact-image"></div>
-                <div>
-                    <h2>
-                        Comunícate con Nosotros.
-                    </h2>
-                    <p>En Air Guest nuestra misión es servirte, te contestaremos lo mas pronto posible.</p>
+                <div class="contact-info">
+                    <div class="contact-info-container">
+                        <h2>
+                            Comunícate con Nosotros.
+                        </h2>
+                        <p>En Air Guest nuestra misión es servirte, te contestaremos lo mas pronto posible.</p>
+                        <div class="lists">
+                            <ul>
+                                <li>Carretera Laredo Km 1006 </li>
+                                <li> Aeropuerto del Norte</li>
+                                <li>Apodaca, N.L.</li>
+                            </ul>
+                            <div class="links">
+                                <a href="mailto:info@airguest.com.mx" class="footer-link">info@airguest.com.mx</a>
+                                <a class="footer-link" href="#">81 4593 1597</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="contact-form">
-                    <form class="form" action="#">
-                        <div class="fields">
-                            <label for="">Nombres</label>
-                            <br>
-                            <input type="text">
-                        </div>
-                        <div class="fields">
-                            <label for="">Correo</label>
-                            <br>
-                            <input type="text">
-                        </div>
-                        <div class="fields">
-                            <label for="">Telefono</label>
-                            <br>
-                            <input type="text">
-                        </div>
-                        <div class="fields">
-                            <label for="">Mensaje</label>
-                            <br>
-                            <textarea name="" id="" cols="30" rows="5"></textarea>
-                        </div>
-                        <button class="btn-enviar">Enviar datos</button>
-                    </form>
-                </div> -->
             </div>
-            <div class="contact-map">
-                <h2>Visítanos</h2>
-                <img class="contact-map-image" src="./assets/img/MAPA AIRGUEST.png" alt="">
+            <div class="contact-form">
+                <h2>¿Cómo podemos ayudarte?</h2>
+                <form class="form" action="#">
+                    <div class="fields">
+                        <label for="">Nombres</label>
+                        <br>
+                        <input type="text">
+                    </div>
+                    <div class="fields">
+                        <label for="">Correo</label>
+                        <br>
+                        <input type="text">
+                    </div>
+                    <div class="fields">
+                        <label for="">Telefono</label>
+                        <br>
+                        <input type="text">
+                    </div>
+                    <div class="fields">
+                        <label for="">Mensaje</label>
+                        <br>
+                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                    </div>
+                    <button class="btn-enviar">Enviar datos</button>
+                </form>
+            </div>
+        </section>
+        <section class="map-section">
+            <div class="title">
+                <h2>Visitanos</h2>
+            </div>
+            <div id="map" class="map">
+
             </div>
         </section>
     </main>
@@ -98,6 +116,22 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script>
+        function initMap() {
+            let location =
+            {
+                lat: 25.864683,
+                lng: -100.243642
+            }
+            let map = new google.maps.Map(document.getElementById("map"), {
+                center: location,
+                zoom: 16
+            });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7f4qtFFCwi3XUVZscRvTeohlKElHvJHU&callback=initMap">
+        </script>
 </body>
 
 </html>

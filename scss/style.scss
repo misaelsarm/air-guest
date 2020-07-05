@@ -476,6 +476,7 @@
         &-area {
             display: flex;
             flex-direction: row-reverse;
+            margin-bottom: 5rem;
             .contact-image {
                 width: 50%;
                 display: flex;
@@ -485,26 +486,73 @@
                     width: 60%;
                 }
             }
-            .contact-form {
+            .contact-info {
                 width: 50%;
-                .form {
-                    padding: 4rem;
-                    width: 80%;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                &-container {
+                    width: 60%;
+                    h2 {
+                        font-size: 3rem;
+                        margin-bottom: 2rem;
+                    }
+                    p {
+                        font-size: 1.5rem;
+                        margin-bottom: 2rem;
+                    }
+                    .lists {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 1.5rem;
+                        ul {
+                            li {
+                                list-style: none;
+                            }
+                        }
+                        .links {
+                            display: flex;
+                            flex-direction: column;
+                            a {
+                                color: white;
+                                text-decoration: none;
+                            }
+                        }
+                    }
                 }
             }
         }
 
-        &-map {
-            width: 100%;
-            padding: 0rem;
+        &-form {
             display: flex;
-            align-items: center;
-            justify-content: space-evenly;
             flex-direction: column;
-            padding: 2rem;
-            &-image {
+            h2 {
+                color: white;
+                font-size: 3rem;
+            }
+            .form {
                 width: 40%;
             }
+        }
+    }
+
+    .map-section {
+        background-color: #38383b;
+        .title {
+            color: white;
+            text-align: center;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h2 {
+                font-size: 3rem;
+            }
+        }
+        .map {
+            height: 60vh;
         }
     }
 
