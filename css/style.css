@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
-  height: 50vh;
+  height: 100vh;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,31 +206,70 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background: white;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1.5rem;
+}
+
+.footer-title {
+  margin-bottom: 2rem;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .footer-image {
   width: 15rem;
 }
 
-.footer-title {
-  font-size: 2.5rem;
+.footer-contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.footer-link {
+.footer-contact-info .footer-link {
   text-decoration: none;
   color: black;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-location ul li, .footer-links ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  list-style: none;
 }
 
 .header {
   height: 100vh;
-  background: url("../assets/img/img-5.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.473))), url("../assets/img/img-5.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.473)), url("../assets/img/img-5.jpg");
   background-size: cover;
   background-position: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header h1 {
+  margin-left: 2rem;
+  font-size: 4rem;
+  margin-bottom: 2rem;
 }
 
 .intro {
@@ -238,10 +277,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro-text {
+  height: 50vh;
   padding: 2rem;
-  height: auto;
   background-color: #38383b;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .intro-text-title {
@@ -258,10 +303,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .intro-image {
   height: 50vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url("../assets/img/img-6.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("../assets/img/img-6.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.intro-image-1 {
+  background-image: url("../assets/img/img-4.jpg");
+}
+
+.intro-image-2 {
+  background-image: url("../assets/img/img-15.jpg");
+}
+
+.intro-image-3 {
+  background-image: url("../assets/img/img-20.jpg");
 }
 
 .gallery-body {
@@ -482,9 +537,13 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../assets/img/img-4.jpg");
 }
 
+.services-intro-grid-image-12 {
+  background: url("../assets/img/img-22.jpg");
+}
+
 .about-us-header {
   height: 100vh;
-  background: url("../assets/img/img-14.jpg");
+  background: url("../assets/img/img-20.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -710,17 +769,31 @@ h1, h2, h3, h4, h5, h6 {
   .nav-bar .menu {
     display: none;
   }
+  .header {
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .header h1 {
+    margin-left: 10rem;
+    font-size: 6rem;
+    margin-bottom: 10rem;
+  }
   .intro {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .intro-text, .intro-image {
-    width: 60%;
+    width: 50%;
     height: 100%;
   }
   .intro-text {
-    width: 40%;
+    width: 50%;
     padding: 5rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -869,6 +942,15 @@ h1, h2, h3, h4, h5, h6 {
   }
   .contact-map-image {
     width: 40%;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 /*# sourceMappingURL=style.css.map */
