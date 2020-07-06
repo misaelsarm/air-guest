@@ -589,56 +589,27 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.7rem;
 }
 
-.contact {
-  height: auto;
+.contact-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #38383b;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
-.contact-image {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2))), url("../assets/img/img-1.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.2)), url("../assets/img/img-1.jpg");
+.contact-area .contact-image {
+  background: url("../assets/img/img-1.jpg");
   background-size: cover;
   background-position: center;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 40vh;
+}
+
+.contact-area .contact-info {
+  background-color: #38383b;
   color: white;
-  height: 50vh;
-}
-
-.contact-image .text {
-  text-align: center;
-}
-
-.contact-image .text h2 {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-}
-
-.contact-image .text p {
-  font-size: 1.6rem;
-}
-
-.contact-form {
-  width: 100%;
+  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -650,85 +621,116 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: center;
 }
 
-.contact-form .form {
-  padding: 4rem;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+.contact-area .contact-info-container {
+  width: 80%;
 }
 
-.contact-form .form .fields {
-  color: white;
+.contact-area .contact-info-container p {
   font-size: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-bottom: 2rem;
 }
 
-.contact-form .form .fields input,
-.contact-form .form .fields textarea {
-  padding: 0.8rem;
-  font-size: 1.5rem;
-  font-family: "Noto Serif SC", serif;
-  border: none;
-  outline: none;
-  background-color: white;
-  resize: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border: 1px solid transparent;
-}
-
-.contact-form .form .fields input:focus,
-.contact-form .form .fields textarea:focus {
-  background-color: #e4e2e2;
-  border: 1px solid #a0a0a0;
-}
-
-.contact-form .form .btn-enviar {
-  padding: 0.8rem;
-  color: white;
-  text-decoration: none;
-  background: #a8a6a1;
-  font-size: 1.5rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  outline: none;
-  border: none;
-  font-family: "Noto Serif SC", serif;
-}
-
-.contact-form .form .btn-enviar:hover {
-  background: #777777;
-}
-
-.contact-map {
-  padding: 2rem;
-  text-align: center;
-  background-color: white;
-  color: #38383b;
-}
-
-.contact-map h2 {
+.contact-area .contact-info-container h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
 
-.contact-map-image {
+.contact-area .contact-info-container .lists {
+  font-size: 1.5rem;
+}
+
+.contact-area .contact-info-container .lists ul {
+  margin-bottom: 2rem;
+}
+
+.contact-area .contact-info-container .lists ul li {
+  list-style: none;
+}
+
+.contact-area .contact-info-container .lists .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.contact-area .contact-info-container .lists .links a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact-form {
+  background-color: #38383b;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+}
+
+.contact-form h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.contact-form .form {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact-form .form .fields {
   width: 100%;
+}
+
+.contact-form .form .fields input {
+  width: 100%;
+}
+
+.map-section {
+  background-color: #38383b;
+}
+
+.map-section .title {
+  color: white;
+  text-align: center;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.map-section .title h2 {
+  font-size: 3rem;
+}
+
+.map-section .map {
+  height: 60vh;
 }
 
 @media only screen and (min-width: 768px) {
@@ -904,7 +906,6 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    margin-bottom: 5rem;
   }
   .contact-area .contact-image {
     width: 50%;
@@ -921,6 +922,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 60%;
   }
   .contact-area .contact-info {
+    height: 100vh;
     width: 50%;
     color: white;
     display: -webkit-box;

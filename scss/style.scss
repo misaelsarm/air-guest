@@ -249,96 +249,94 @@
 }
 
 .contact {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    background-color: #38383b;
-    &-image {
-        background: linear-gradient(rgba(0, 0, 0, 0.2)), url("../assets/img/img-1.jpg");
-        background-size: cover;
-        background-position: center;
-        width: 100%;
+    &-area {
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        color: white;
-        height: 50vh;
-        .text {
-            text-align: center;
-            h2 {
-                font-size: 4rem;
-                margin-bottom: 2rem;
-            }
-            p {
-                font-size: 1.6rem;
+        flex-direction: column-reverse;
+        .contact-image {
+            background: url("../assets/img/img-1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+        }
+        .contact-info {
+            background-color: #38383b;
+            color: white;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-container {
+                width: 80%;
+                p {
+                    font-size: 1.5rem;
+                    margin-bottom: 2rem;
+                }
+                h2 {
+                    font-size: 3rem;
+                    margin-bottom: 2rem;
+                }
+                .lists {
+                    font-size: 1.5rem;
+                    ul {
+                        margin-bottom: 2rem;
+                        li {
+                            list-style: none;
+                        }
+                    }
+                    .links {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        a {
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+                }
             }
         }
     }
     &-form {
-        width: 100%;
+        background-color: #38383b;
+        height: 50vh;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+        color: white;
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
         .form {
-            padding: 4rem;
-            //height: 60%;
-            width: 100%;
+            height: 80%;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-around;
             .fields {
-                color: white;
-                font-size: 1.5rem;
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 2rem;
-                input,
-                textarea {
-                    padding: 0.8rem;
-                    font-size: 1.5rem;
-                    font-family: "Noto Serif SC", serif;
-                    border: none;
-                    outline: none;
-                    background-color: white;
-                    resize: none;
-                    transition: all 0.3s;
-                    border: 1px solid transparent;
-                    &:focus {
-                        background-color: rgb(228, 226, 226);
-                        border: 1px solid #a0a0a0;
-                    }
-                }
-            }
-            .btn-enviar {
-                padding: 0.8rem;
-                color: white;
-                text-decoration: none;
-                background: #a8a6a1;
-                font-size: 1.5rem;
-                transition: all 0.3s;
-                outline: none;
-                border: none;
-                font-family: "Noto Serif SC", serif;
-                &:hover {
-                    background: #777777;
+                width: 100%;
+                input {
+                    width: 100%;
                 }
             }
         }
     }
-
-    &-map {
-        padding: 2rem;
+}
+.map-section {
+    background-color: #38383b;
+    .title {
+        color: white;
         text-align: center;
-        background-color: white;
-        color: #38383b;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         h2 {
             font-size: 3rem;
-            margin-bottom: 2rem;
         }
-        &-image {
-            width: 100%;
-        }
+    }
+    .map {
+        height: 60vh;
     }
 }
 
@@ -476,7 +474,6 @@
         &-area {
             display: flex;
             flex-direction: row-reverse;
-            margin-bottom: 5rem;
             .contact-image {
                 width: 50%;
                 display: flex;
@@ -487,6 +484,7 @@
                 }
             }
             .contact-info {
+                height: 100vh;
                 width: 50%;
                 color: white;
                 display: flex;
