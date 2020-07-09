@@ -4,12 +4,12 @@
     justify-content: space-between;
     padding: 2rem;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     transition: all 0.5s;
     z-index: 2;
     font-family: "Barlow", sans-serif;
     &:hover {
-        background-color: #38383b;
+        background-color: black;
     }
     &-brand {
         width: 12rem;
