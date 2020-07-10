@@ -15,6 +15,7 @@
         font-weight: 900;
         font-size: 2rem;
         text-align: center;
+        color: #EE6C4D;
     }
     &-image {
         width: 15rem;
@@ -36,6 +37,10 @@
                 margin-bottom: 0.5rem;
                 font-size: 1.5rem;
                 list-style: none;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
             }
         }
     }

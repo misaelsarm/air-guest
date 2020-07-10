@@ -1,11 +1,12 @@
 $(document).ready(function () {
     $('.header').slick({
-        autoplay: false,
+        autoplay: true,
         infinite: true,
         speed: 1000,
         arrows: false,
         //fade: true,
         autoplaySpeed: 4000,
-        accessibility: false
+        accessibility: false,
+        pauseOnHover: false
     });
 });
